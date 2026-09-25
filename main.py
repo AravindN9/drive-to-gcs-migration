@@ -25,7 +25,7 @@ def move_drive_to_gcs():
     file_stream = io.BytesIO()
     downloader = MediaIoBaseDownload(file_stream, request)
 
-    done = False
+    # done = False
     while not done:
         status, done = downloader.next_chunk()
         print(f"Download {int(status.progress() * 100)}%.")
